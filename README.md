@@ -6,4 +6,4 @@ A faux imitation of what AGI may be like, interesting features include revealing
 Adaptive learning, rewriting its code base. To add more features we began crewting visualization plugins on Eliza. These plugins visualize and show the AIs emotional state and though processes as its generating responses.
 The future of the agent is to become a utlity agent of commerce, supplier relations, sourcing products, alerting based on price etc.
 An agent that is a product researcher, sourcer and transactor all in one.
-See the new repo --> agentofcommerce
+See the new repo --> agentofcommerce (under development)

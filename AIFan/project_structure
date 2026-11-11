@@ -1,0 +1,32 @@
+ai-agent/
+├── src/
+│   ├── agent/
+│   │   ├── __init__.py
+│   │   ├── ai_agent.py
+│   │   ├── personality.py
+│   │   └── train_personality.py
+│   ├── blockchain/
+│   │   ├── __init__.py
+│   │   ├── solana_client.py
+│   │   └── raydium_client.py
+│   ├── social/
+│   │   ├── __init__.py
+│   │   ├── twitter_bot.py
+│   │   ├── twitter_client.py
+│   │   └── database.py
+│   └── frontend/
+│       ├── __init__.py
+│       ├── main.py
+│       ├── token_management.py
+│       └── styles/
+│           └── main.css
+├── scripts/
+│   ├── cleanup.py
+│   └── setup_dependencies.py
+├── tests/
+├── .env.example
+├── .gitignore
+├── README.md
+├── docker-compose.yml
+├── Dockerfile
+└── requirements.txt 

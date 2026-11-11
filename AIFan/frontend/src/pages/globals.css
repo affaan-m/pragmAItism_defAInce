@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Digital Rain</title>
+<style>
+body {
+  margin: 0;
+  overflow: hidden; /* Hide scrollbars */
+  background-color: black;
+}
+
+.digital-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+.digital-rain span {
+  position: absolute;
+  color: lime;
+  font-family: monospace;
+  font-size: 12px;
+  opacity: 0;
+  animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+</style>
+</head>
+<body>
+<div class="digital-rain"></div>
+<script>
+const rainContainer = document.querySelector('.digital-rain');
+const characters = '01';
+const numberOfColumns = 100;
+const columnHeight = window.innerHeight;
+
+for (let i = 0; i < numberOfColumns; i++) {
+  const column = document.createElement('span');
+  const randomHeight = Math.floor(Math.random() * columnHeight);
+  const randomDelay = Math.random() * 5; // Random delay for each column
+
+  for (let j = 0; j < randomHeight; j++) {
+    const character = document.createElement('span');
+    character.textContent = characters[Math.floor(Math.random() * characters.length)];
+    column.appendChild(character);
+  }
+
+  column.style.left = `${i * 10}px`; // Adjust spacing between columns
+  column.style.animationDelay = `${randomDelay}s`;
+  rainContainer.appendChild(column);
+}
+</script>
+</body>
+</html>
+
